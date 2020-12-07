@@ -30,3 +30,6 @@
 
 # envs
 *.env
+
+# logs
+*.log
