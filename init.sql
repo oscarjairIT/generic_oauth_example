@@ -1,1 +1,0 @@
-CREATE USER example_development SUPERUSER;
