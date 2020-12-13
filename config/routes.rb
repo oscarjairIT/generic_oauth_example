@@ -6,4 +6,7 @@ Rails.application.routes.draw do
       resources :flows
     end
   end
+
+  get '/oauth/check', to: 'oauth_check#index'
+
 end

@@ -1,4 +1,4 @@
-class Api::V1::FlowsController < ApplicationController
+class Api::V1::FlowsController < ApiController
 
     # Returns access credentials from .env
     def index
