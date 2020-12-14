@@ -1,6 +1,8 @@
 class FlowGithub < ApplicationService
+    attr_reader :code
 
-    def initialize
+    def initialize(code)
+        @code = code
         @client_id = ENV["GITHUB_CLIENTID"]
         @client_secret = ENV["GITHUB_SECRETID"]
         @auth_url = ENV["GITHUB_AUTH_URL"]
@@ -18,5 +20,20 @@ class FlowGithub < ApplicationService
             :client_id => @client_id ,
             :client_secret => @client_secret
         }
+    end
+
+    def get_token
+        result = HTTParty.get(@token_url,
+            :body => {
+                :client_id => @client_id,
+                :client_secret => @client_secret,
+                :code => @code
+            }.to_json,
+            :headers => {
+            "Content-Type" => "application/json",
+            "Accept" => "application/json"
+        }) 
+        result = result.parsed_response
+        return result
     end
 end

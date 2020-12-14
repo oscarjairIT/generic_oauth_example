@@ -9,4 +9,8 @@ class ApplicationService
     def self.redirect(*args, &block)
         new(*args, &block).redirect
     end
+
+    def self.get_token(*args, &block)
+        new(*args, &block).get_token
+    end
 end
