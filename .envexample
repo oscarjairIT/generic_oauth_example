@@ -1,0 +1,13 @@
+GOOGLE_CLIENTID=*********
+GOOGLE_SECRETID=********
+GOOGLE_AUTH_URL=https://accounts.google.com/o/oauth2/auth
+GOOGLE_TOKEN_URL=https://oauth2.googleapis.com/token
+GOOGLE_CALLBACK_URL=http://localhost:3000/api/v1/flows_token?platform=Google
+GOOGLE_SCOPE = https://www.googleapis.com/auth/userinfo.email
+
+
+GITHUB_CLIENTID=*********
+GITHUB_SECRETID=*********
+GITHUB_AUTH_URL=https://github.com/login/oauth/authorize
+GITHUB_TOKEN_URL=https://github.com/login/oauth/access_token
+CALLBACK_URL=http://localhost:3000/api/v1/flows_token?platform=Github&
