@@ -1,3 +1,4 @@
+# docs: https://docs.github.com/en/free-pro-team@latest/developers/apps/authorizing-oauth-apps
 class FlowGithub < ApplicationService
     attr_reader :code
 
